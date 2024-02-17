@@ -3,9 +3,16 @@ import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
 import Center from "./components/Center";
 import "./App.css";
+import About from "./components/About";
+import { useState } from "react";
+
+// showstate, usesetState
 
 
 function App() {
+
+//  const [showAbout, setShowAbout] = useState(true)
+
   return (
        <Grid templateAreas={'"nav nav" "aside main"'}>
       <Grid
@@ -22,6 +29,7 @@ function App() {
       </GridItem>
       <GridItem area="main">
         <Center />
+{/*        <if (showAbout) {<About} : setShowAbout */}
       </GridItem>
     </Grid>
   );
