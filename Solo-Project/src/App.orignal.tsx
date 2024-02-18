@@ -3,18 +3,16 @@ import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
 import Center from "./components/Center";
 import "./App.css";
-import About from "./components/About";
+import About from "./components/z.About";
 import { useState } from "react";
 
 // showstate, usesetState
 
-
 function App() {
-
-//  const [showAbout, setShowAbout] = useState(true)
+  //  const [showAbout, setShowAbout] = useState(true)
 
   return (
-       <Grid templateAreas={'"nav nav" "aside main"'}>
+    <Grid templateAreas={'"nav nav" "aside main"'}>
       <Grid
         templateAreas={{
           base: '"nav" "main"', //Mobile devices
@@ -25,11 +23,11 @@ function App() {
         <NavBar />
       </GridItem>
       <GridItem area="aside">
-        <SideBar />  
+        <SideBar />
       </GridItem>
       <GridItem area="main">
         <Center />
-{/*        <if (showAbout) {<About} : setShowAbout */}
+        {/*        <if (showAbout) {<About} : setShowAbout */}
       </GridItem>
     </Grid>
   );
@@ -38,23 +36,23 @@ function App() {
 //      {/* This is the alias of BrowserRouter i.e. Router */}
 //      <Router>
 //        <Routes>
-//          {/* This route is for home component 
-//		with exact path "/", in component props 
+//          {/* This route is for home component
+//		with exact path "/", in component props
 //		we passes the imported component*/}
 //          <Route path="/" element={<TestHome />} />
 
-//          {/* This route is for about component 
-//		with exact path "/about", in component 
+//          {/* This route is for about component
+//		with exact path "/about", in component
 //		props we passes the imported component*/}
 //          <Route path="/about" element={<TestAbout />} />
 
 //          {/* This route is for contactus component
-//		with exact path "/contactus", in 
+//		with exact path "/contactus", in
 //		component props we passes the imported component*/}
 //          <Route path="/contactus" element={<TestContactUs />} />
 
-//          {/* If any route mismatches the upper 
-//		route endpoints then, redirect triggers 
+//          {/* If any route mismatches the upper
+//		route endpoints then, redirect triggers
 //		and redirects app to home component with to="/" */}
 //          {/* <Redirect to="/" /> */}
 //          <Route path="*" element={<Navigate to="/" />} />
@@ -65,12 +63,6 @@ function App() {
 //}
 
 export default App;
-
-
-
-
-
-
 
 // Working Grid.........................
 //import { Grid, GridItem } from "@chakra-ui/react";
