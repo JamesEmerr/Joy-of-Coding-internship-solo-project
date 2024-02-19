@@ -2,7 +2,6 @@ import { Grid, GridItem } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
 import Center from "./components/Center";
-import "./AppOriginal.css";
 import About from "./components/About";
 import { useState } from "react";
 

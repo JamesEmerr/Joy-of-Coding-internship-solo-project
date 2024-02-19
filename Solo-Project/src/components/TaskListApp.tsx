@@ -1,12 +1,10 @@
-//https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
-
 import { useState, useRef, useEffect } from "react";
-import Form from "./Form";
-import FilterButton from "./FilterButton";
-import Todo from "./Todo";
+import Form from "./TaskListForm";
+import FilterButton from "./TaskListFilterButton";
+import Todo from "./TaskListTodo";
 import { nanoid } from "nanoid";
 
-function usePrevious(value: null) {
+function usePrevious(value) {
   const ref = useRef(null);
   useEffect(() => {
     ref.current = value;
@@ -16,18 +14,18 @@ function usePrevious(value: null) {
 
 const FILTER_MAP = {
   All: () => true,
-  Active: (task: { completed: any }) => !task.completed,
-  Completed: (task: { completed: any }) => task.completed,
+  Active: (task) => !task.completed,
+  Completed: (task) => task.completed,
 };
 
 const FILTER_NAMES = Object.keys(FILTER_MAP);
 
-function App(props: { tasks: any }) {
+function TaskListApp(props) {
   const [tasks, setTasks] = useState(props.tasks);
   const [filter, setFilter] = useState("All");
 
-  function toggleTaskCompleted(id: any) {
-    const updatedTasks = tasks.map((task: { id: any; completed: any }) => {
+  function toggleTaskCompleted(id) {
+    const updatedTasks = tasks.map((task) => {
       // if this task has the same ID as the edited task
       if (id === task.id) {
         // use object spread to make a new obkect
@@ -39,13 +37,13 @@ function App(props: { tasks: any }) {
     setTasks(updatedTasks);
   }
 
-  function deleteTask(id: any) {
-    const remainingTasks = tasks.filter((task: { id: any }) => id !== task.id);
+  function deleteTask(id) {
+    const remainingTasks = tasks.filter((task) => id !== task.id);
     setTasks(remainingTasks);
   }
 
-  function editTask(id: any, newName: any) {
-    const editedTaskList = tasks.map((task: { id: any }) => {
+  function editTask(id, newName) {
+    const editedTaskList = tasks.map((task) => {
       // if this task has the same ID as the edited task
       if (id === task.id) {
         // Copy the task and update its name
@@ -59,7 +57,7 @@ function App(props: { tasks: any }) {
 
   const taskList = tasks
     ?.filter(FILTER_MAP[filter])
-    .map((task: { id: any; name: any; completed: any }) => (
+    .map((task) => (
       <Todo
         id={task.id}
         name={task.name}
@@ -80,7 +78,7 @@ function App(props: { tasks: any }) {
     />
   ));
 
-  function addTask(name: any) {
+  function addTask(name) {
     const newTask = { id: "todo-" + nanoid(), name: name, completed: false };
     setTasks([...tasks, newTask]);
   }
@@ -116,4 +114,4 @@ function App(props: { tasks: any }) {
   );
 }
 
-export default App;
+export default TaskListApp;

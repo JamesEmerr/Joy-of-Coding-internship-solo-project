@@ -29,6 +29,10 @@ export default {
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+
+
 "MCX"
 Main
 AppOriginal
@@ -40,10 +44,12 @@ AppOriginal
     Calender
 
 
+https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
+https://github.com/mdn/todo-react
 
 "Task List"
 Main
-App
-  FilterButton
-  Form
-  Todo
+ TaskListApp
+  TaskListFilterButton
+  TaskListForm
+  TaskListTodo

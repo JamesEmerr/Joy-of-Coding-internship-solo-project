@@ -1,12 +1,10 @@
 //J Programming //
 // MCX //
 
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { ChakraProvider } from "@chakra-ui/react";
-import App from "./components/App";
-//import './index.css'
-
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import TaskListApp from './components/TaskListApp'
+import './index.css'
 
 const DATA = [
   { id: "todo-0", name: "Eating", completed: false },
@@ -22,9 +20,9 @@ const DATA = [
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <ChakraProvider>
-      <App tasks={DATA} />  {/* Task List */}
-    {/* <AppOriginal />  Original MCX */}
-    </ChakraProvider>
+  {/*  <ChakraProvider> */}
+      <TaskListApp tasks={DATA} />   {/*Task List */}
+     {/* <App />  Original MCX */}
+  {/*  </ChakraProvider> */}
   </React.StrictMode>
 );
