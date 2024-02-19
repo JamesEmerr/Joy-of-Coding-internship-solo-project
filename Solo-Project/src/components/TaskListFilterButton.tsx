@@ -20,7 +20,7 @@ function FilterButton(props: {
     | undefined;
 }) {
   return (
-    <Button color="lightblue" justifyContent="center" padding="10px"
+    <Button  justifyContent="center" padding="20px"
 //      type="button"
       className="btn toggle-btn"
 //      aria-pressed={props.isPressed}

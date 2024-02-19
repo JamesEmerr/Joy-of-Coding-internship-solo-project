@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from "@chakra-ui/react";
 
 function Form(props) {
   const [name, setName] = useState('');
@@ -20,8 +21,10 @@ function Form(props) {
     <form onSubmit={handleSubmit}>
       <h2 className="label-wrapper">
         <label htmlFor="new-todo-input" className="label__lg">
-          What needs to be done?
+          The First 5 tasks are Required
         </label>
+        However, you can add tasks Below
+        
       </h2>
 
       <input
@@ -33,9 +36,12 @@ function Form(props) {
         value={name}
         onChange={handleChange}
       />
-      <button type="submit" className="btn btn__primary btn__lg">
+      <Button type="submit" justifyContent="center" className="btn btn__primary btn__lg">
         Add
-      </button>
+      </Button>
+{/*}      <button type="submit" className="btn btn__primary btn__lg">
+        Add
+  </button> */}
     </form>
   );
 }
