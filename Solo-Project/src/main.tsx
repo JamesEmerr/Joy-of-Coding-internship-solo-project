@@ -6,7 +6,7 @@ import ReactDOM from "react-dom/client";
 import TaskListApp from "./components/TaskListApp";
 import "./index.css";
 import { ChakraProvider } from "@chakra-ui/react";
-import SAApp from "./components/SAApp";
+//import SAApp from "./components/SAApp";
 
 const DATA = [
   { id: "todo-0", name: "Eating", completed: false },
@@ -22,10 +22,10 @@ const DATA = [
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <ChakraProvider>
-    {/* <TaskListApp tasks={DATA} /> Task List */}
+  {/*}  <ChakraProvider> */}
+     <TaskListApp tasks={DATA} /> {/*Task List */}
     {/* <App />  Original MCX */}
-     <SAApp />  {/* Page Rendering Example */}
-    </ChakraProvider>
+    {/* <SAApp />  {/* Page Rendering Example */}
+  {/*  </ChakraProvider> */}
   </React.StrictMode>
 );
